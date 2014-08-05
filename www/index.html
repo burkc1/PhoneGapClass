@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html;
+      charset=utf-8">
+    <meta name="viewport" id="viewport"
+          content="width=device-width, height=device-height,
+      initial-scale=1.0, maximum-scale=1.0,
+      user-scalable=no;" />
+
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+
+
+
+
+    <script type="text/javascript" charset="utf-8"
+            src="phonegap.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        function onBodyLoad() {
+            document.addEventListener("deviceready", onDeviceReady,
+                    false);
+        }
+        function onDeviceReady() {
+            //Get the appInfo DOM element
+            var element = document.getElementById('appInfo');
+            //replace it with specific information about the device
+            //running the application
+            element.innerHTML = 'PhoneGap (version ' +
+                    device.phonegap + ')<br />' + device.platform + ' ' +
+                    device.name + ' (version ' + device.version + ').';
+        }
+    </script>
+</head>
+<body onload="onBodyLoad()">
+<div data-role="page">
+    <div data-role="header" data-position="fixed">
+        <h1>HelloWorld3</h1>
+    </div>
+
+    <div data-role="content">
+        <p>This is a PhoneGap application that makes calls to the
+            PhoneGap APIs.</p>
+        <p id="appInfo">Waiting for PhoneGap Initialization to
+            complete</p>
+
+        <ul data-role="listview">
+            <li><a href="test1.html">test1</a></li>
+            <li><a href="test2.html">test2</a></li>
+            <li><a href="test3.html">test3</a></li>
+        </ul>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h1>phonegap essentials</h1>
+</div>
+
+</div>
+
+
+</body>
+</html>
